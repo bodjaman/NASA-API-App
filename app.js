@@ -1,24 +1,25 @@
-// To Do:
-// 1) Add a button with event listener (click) OR add change/input listener to date-form
-// 2) Call function on event (click/change/input) that sets selectedDate variable
-//    - See examples: https://www.w3schools.com/jsref/prop_date_value.asp
-// 3) Add links - Github, About, API link
-// 4) Push to GitHub and deploy on Netlify
-// 5) Add extra features
-//    - camera name on mouse-hover (following cursor)
-//    - colour overlay buttons
-//    - load images only, NOT whole page on new date
+// SET URL
 
+let landed = new Date("2012-08-06"); // landing date
+let current = new Date(); // current date
+
+let generated, generatedYear, generatedMonth, generatedDay, generatedDateStr;
 const apiKey = "6ItzpbwnWxj8ZbItja9hE9UbkvqP1HiDSpFFNg2q";
-let dateForm = document.getElementById("selected-date");
-let submit = document.getElementById("submit");
-let selectedDate = "2015-06-03";
-let url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${selectedDate}&api_key=${apiKey}`;
-submit.addEventListener("click", changeDate);
+let url;
 
-function changeDate() {
-  selectedDate = dateForm.value;
+function randomDateInRange(start, end) {
+  date = new Date(
+    start.getTime() + Math.random() * (end.getTime() - start.getTime())
+  );
+
+  generatedYear = date.getFullYear();
+  generatedMonth = date.getMonth() + 1;
+  generatedDay = date.getDate();
+  generatedDateStr = `${generatedYear}-${generatedMonth}-${generatedDay}`;
+  url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${generatedDateStr}&api_key=${apiKey}`;
 }
+
+// GET IMAGES
 
 function getImages() {
   fetch(url)
@@ -34,4 +35,15 @@ function getImages() {
     });
 }
 
+randomDateInRange(landed, current);
+document.getElementById("earth-date").innerHTML = generatedDateStr;
 getImages();
+
+// To Do:
+// 1) Add README
+// 3) Add ENV Variables
+// 2) Push to GitHub and deploy on Netlify
+// 3) Add extra features
+//    - camera name on mouse-hover (following cursor)
+//    - colour overlay buttons
+//    - load images only, NOT whole page on new date

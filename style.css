@@ -1,34 +1,38 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   width: 70%;
   margin: auto;
   background-color: black;
-  color: lightsteelblue;
 }
 
 header {
-  text-align: center;
+  text-align: left;
+}
+
+#icon-github {
+  width: 30px;
+  float: right;
 }
 
 h1 {
+  color: lightsteelblue;
 }
 
 .main {
 }
 
-.date-select {
+#text {
   color: lightyellow;
-  text-align: center;
-  margin-bottom: 20px;
+  font-size: 16px;
 }
 
-#date-form {
-}
-
-#selected-date {
-  background-color: lightyellow;
-  border: none;
-  margin-left: 10px;
+#earth-date {
+  color: lightyellow;
+  font-weight: bold;
 }
 
 #rover-photos {
