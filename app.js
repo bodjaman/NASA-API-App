@@ -4,7 +4,7 @@ let landed = new Date("2012-08-06"); // landing date
 let current = new Date(); // current date
 
 let generated, generatedYear, generatedMonth, generatedDay, generatedDateStr;
-const apiKey = "6ItzpbwnWxj8ZbItja9hE9UbkvqP1HiDSpFFNg2q";
+const apiKey = process.env.API_KEY;
 let url;
 
 function randomDateInRange(start, end) {
@@ -40,8 +40,7 @@ document.getElementById("earth-date").innerHTML = generatedDateStr;
 getImages();
 
 // To Do:
-// 1) Add README
-// 3) Add ENV Variables
+// 1) ENV Variables
 // 2) Push to GitHub and deploy on Netlify
 // 3) Add extra features
 //    - camera name on mouse-hover (following cursor)
