@@ -4,7 +4,7 @@ let landed = new Date("2012-08-06"); // landing date
 let current = new Date(); // current date
 
 let generated, generatedYear, generatedMonth, generatedDay, generatedDateStr;
-const apiKey = process.env.API_KEY;
+const apiKey = "6ItzpbwnWxj8ZbItja9hE9UbkvqP1HiDSpFFNg2q";
 let url;
 
 function randomDateInRange(start, end) {
