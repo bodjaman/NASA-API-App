@@ -38,11 +38,3 @@ function getImages() {
 randomDateInRange(landed, current);
 document.getElementById("earth-date").innerHTML = generatedDateStr;
 getImages();
-
-// To Do:
-// 1) ENV Variables
-// 2) Push to GitHub and deploy on Netlify
-// 3) Add extra features
-//    - camera name on mouse-hover (following cursor)
-//    - colour overlay buttons
-//    - load images only, NOT whole page on new date
