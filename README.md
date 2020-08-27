@@ -8,8 +8,7 @@ The project is deployed with Netlify, take a look [here](https://nostalgic-newto
 
 I'd like to:
 
-- Have the camera name appear on mouse-hover
-- Set a range for the input, so that users cannot pick a date prior to Curiosity's landing on Mars
-- Find (if possible) a neater way to remove one set of images and render another set
-- Have the most recent set of images, or a single random image render before any input
-- Add more styling and tidy up the CSS (it's a mess since I converted this to a React app...)
+1. Have the most recent set of images, or a single random image render before any input is taken
+2. CSS: Add more styling, have tooltip on image mouse-hover, showing metadata
+3. Set a range for the input, so that users cannot pick a date prior to Curiosity's landing on Mars - I have this function already written
+4. Find a neater way to remove one set of images and render another
