@@ -9,6 +9,6 @@ The project is deployed with Netlify, take a look [here](https://nostalgic-newto
 I'd like to:
 
 1. Have the most recent set of images, or a single random image render before any input is taken
-2. CSS: Add more styling, have tooltip on image mouse-hover, showing metadata
-3. Set a range for the input, so that users cannot pick a date prior to Curiosity's landing on Mars - I have this function already written
-4. Find a neater way to remove one set of images and render another
+2. Display tooltip on image-mouse-hover, showing metadata
+3. ~~Set a range for the input, so that users cannot pick a date prior to Curiosity's landing on Mars~~
+4. ~~Find a neater way to remove one set of images and render another~~ - stored an array of photos in state and created an Image component for each photo pulled from API
