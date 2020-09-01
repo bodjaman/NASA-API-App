@@ -44,6 +44,10 @@ h1 {
   text-align: center;
 }
 
+#defaultphoto {
+  width: 48%;
+}
+
 #rover-photos {
   text-align: center;
 }
