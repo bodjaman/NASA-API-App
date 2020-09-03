@@ -20,10 +20,6 @@ class SelectDateAndRender extends Component {
       });
   };
 
-  componentDidMount() {
-    this.fetchImages();
-  }
-
   selectDateHandler = (event) => {
     this.setState(
       {
@@ -31,12 +27,18 @@ class SelectDateAndRender extends Component {
         url: `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${event.target.value}&api_key=6ItzpbwnWxj8ZbItja9hE9UbkvqP1HiDSpFFNg2q`,
         input: true,
       },
-      this.fetchImages()
+      this.fetchImages
     );
   };
 
+  componentDidMount() {
+    this.fetchImages();
+  }
+
   render() {
-    let photos = (
+    let photos;
+
+    photos = (
       <div id="rover-photos">
         {this.state.photos.map((photo) => {
           return (
